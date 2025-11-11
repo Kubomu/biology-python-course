@@ -1,0 +1,18 @@
+#!/bin/bash
+
+# Configure Jupyter to disable token authentication
+jupyter notebook --generate-config
+cat >> /home/jovyan/.jupyter/jupyter_notebook_config.py << EOF
+c.NotebookApp.token = ''
+c.NotebookApp.password = ''
+c.NotebookApp.allow_origin = '*'
+c.NotebookApp.disable_check_xsrf = True
+EOF
+
+# Also configure for JupyterLab
+cat >> /home/jovyan/.jupyter/jupyter_server_config.py << EOF
+c.ServerApp.token = ''
+c.ServerApp.password = ''
+c.ServerApp.allow_origin = '*'
+c.ServerApp.disable_check_xsrf = True
+EOF
