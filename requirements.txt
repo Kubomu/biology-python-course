@@ -1,0 +1,19 @@
+# Python for Biology - Binder Requirements
+# Generated for Gulu University Biology Teaching Package
+# Compatible with mybinder.org
+
+# Core Data Science Libraries
+numpy>=1.24.0
+pandas>=2.0.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Biology-Specific Libraries
+biopython>=1.81
+
+# Statistical Analysis
+scipy>=1.10.0
+
+# Optional but Useful
+plotly>=5.14.0
+jupyter>=1.0.0
